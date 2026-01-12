@@ -1,0 +1,153 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+
+body{
+    padding-top: 2%;
+    text-align: center;
+    background: radial-gradient(circle at center, #000 0%, #111 40%, #000 100%);
+    color: #FF073A; /* default neon cyan text */
+    background-color: #0D0D0D;
+}
+
+
+.container{
+    height: 70vmin;
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #FF073A;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    padding-bottom: 3vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    
+    height: 15vh;
+    width: 15vh;
+    border-radius: 1rem;
+    border: 2px solid  #FF073A;
+    font-size: 8vmin;
+    background-color: #FF073A;
+    color: #0ff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px  #0ff,0 0 30px #0ff;
+    color: #FF073A;
+}
+
+.resetGame {
+   margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.7rem;
+    background: #00F0FF;
+    color: #FF073A;  /* glowing cyan text */
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 2px solid #0ff;
+
+    box-shadow: 
+        0 0 5px  #FF073A,
+        0 0 10px  #FF073A,
+        0 0 20px  #FF073A,
+        0 0 40px  #FF073A;
+    transition: 0.3s ease;
+   
+}
+
+
+
+
+.newGame{
+  
+   margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.7rem;
+    background: #00F0FF;
+    color: #FF073A;  /* glowing cyan text */
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 2px solid  #FF073A;
+
+   box-shadow: 
+        0 0 5px  #FF073A,
+        0 0 10px  #FF073A,
+        0 0 20px  #FF073A,
+        0 0 40px  #FF073A;
+    transition: 0.3s ease;
+}
+
+
+
+
+#msg{
+   
+    justify-content: center;
+    align-items: center;
+     font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #FF073A;  /* white text for best glow */
+    text-shadow: 
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+}
+
+.msg-container{
+
+ position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6); /* faded background */
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* <-- this centers vertically */
+    z-index: 1000;
+}
+
+.msg-box {
+    background: rgb(74, 207, 227);
+    padding: 2rem 3rem;
+    
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    width: 100%;
+   padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-highlight {
+    background-color: #0ff;
+    color:#FF073A(226, 230, 40) ;
+}
+
+.hide{
+    display: none;
+}
+

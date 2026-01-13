@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom basic</title>
+</head>
+<body style=" background-color: #212121;
+            color: #fff;">
+    <h1>Languages</h1>
+    <ul class="Language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    const div=document.createElement('div')                           //create a element inside dom//
+    console.log(div);
+    div.className="main"                                              //create a class in dom//
+    div.id=Math.round(Math.random()*10+1)                             //create a id in dom//
+    div.setAttribute("title","ABC")                                   //give an instruction to an element to set an attribute with a value for tooltip//
+    div.style.backgroundColor="blue"
+    div.style.padding ="12px"
+    const addText=document.createTextNode("This is an apple")         //Creates a text node in memory.//
+    div.appendChild(addText)                                          //Inserts the text inside the div.//
+
+    document.body.appendChild(div)                                    //Adds the div to the actual webpage//
+    
+    function addlang(lang){                                             //add a element in dom using function//
+        const li=document.createElement('li')                           //create//
+        li.innerHTML=`${lang}`                                          //innerhtml//
+        document.querySelector('.Language').appendChild(li)             //append//
+    }
+    addlang("python")
+    addlang("c")
+    addlang("ruby")
+    addlang("c++")
+
+    // optimized way of adding a element in dom in case of large number of data//
+
+    function addlangs(langs){
+        const li=document.createElement('li')                           //create a element//
+        const addText=(document.createTextNode(langs))                  //adding the text to the document//
+        li.appendChild(addText)                                         //appeding the txt to li// 
+        document.querySelector('.Language').appendChild(li)             //appending it to language class//
+    }
+    addlangs('Typescript')
+
+    //editing values in dom//
+
+    const langtwo=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')                              //langtwo.innerHTML="Mojo" this can also be used in case//
+    newli.textContent ="mojo"
+    langtwo.replaceWith(newli)
+
+    //edit 2//
+
+    const langone=document.querySelector("li:first-child")
+    langone.outerHTML='<li>Typescript</li>'
+
+    //remove elements//
+    
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+
+</script>
+</html>

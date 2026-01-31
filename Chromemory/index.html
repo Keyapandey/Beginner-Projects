@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Color Changer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Background Color Changer</h1>
+  
+
+
+   
+    <h2 id="levelText">Level 1</h2>
+    <p id="bestScore">Best: 1</p>
+
+
+<p id="gameMessage">
+  Click start to begin
+</p>
+
+<div id="boxContainer"></div>
+
+<button id="doneBtn" style="display:none;">
+  Done
+</button>
+
+
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+
+    </div>
+  </div>
+  
+<audio id="tickSound" src="tickk.mp3"></audio>
+<audio id="sadSound" src="sad.mp3"></audio>
+<audio id="winSound" src="win.mp3"></audio>
+<audio id="clickSound" src="click.mp3"></audio>
+
+<!-- GAME RESULT POPUP -->
+<div id="popup" class="popup hidden">
+  <h1 id="popupText"></h1>
+</div>
+
+<!-- COUNTDOWN OVERLAY -->
+<div id="countdownOverlay" class="countdown hidden">
+  <div id="countText">3</div>
+</div>
+
+
+  <script src="unlimited.js"></script>
+  
+
+</body>
+</html>
